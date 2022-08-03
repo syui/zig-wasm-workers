@@ -11,4 +11,6 @@ $ echo "Hello\nWorld" | wasmtime ./zig-out/bin/*.wasm
 
 $ npx wrangler@wasm login
 $ npx wrangler@wasm publish --name print-with-line-numbers --compatibility-date=2022-07-07  ./zig-out/bin/*.wasm
+
+$ echo "hello\nworld" | curl https://print-with-line-numbers.syui.workers.dev -X POST --data-binary @-
 ```
